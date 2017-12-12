@@ -505,9 +505,6 @@ header .social-icon li a
 		line-height: 35px;
 	}
 }
-/* end 768 media quires */
-
-/* start 360 media quires */
 @media only screen and ( max-width: 360px ) {
 	header .social-icon
 		{
