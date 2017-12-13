@@ -233,7 +233,7 @@ header .social-icon li a
 .element {
 	height: 60px;
 	font-size: 16px;
-	color: black;
+	color: #fef5f5;
 	font-weight:bold;
 }
 
@@ -323,9 +323,7 @@ header .social-icon li a
 		cursor: pointer;
 		opacity: 0.8;
 	}
-/* end portfolio */
 
-/* start contact */
 #contact
 	{
 		background: #202020;
@@ -386,9 +384,7 @@ header .social-icon li a
 		margin-right: 10px;
 		margin-bottom: 10px;
 	}
-/* end contact */
 
-/* start copyright */
 #copyright
 	{
 		padding: 20px;
@@ -397,9 +393,7 @@ header .social-icon li a
 	{
 		font-weight: 400;
 	}
-/* end copyright */
-
-/* start social icon */
+/
 .social-icon
 	{
 		position: relative;
@@ -435,7 +429,7 @@ header .social-icon li a
 		background: #28a7e9;
 		border-color: transparent;
 	}
-/* end social icon */
+
 
 @media only screen and (max-width: 1199px) and (min-width: 992px) {
 	#portfolio .portfolio-thumb .portfolio-overlay {
@@ -443,7 +437,6 @@ header .social-icon li a
 	}
 }
 
-/* start 980 media quires */
 @media only screen and ( max-width: 980px ) {
 	#team .team-wrapper
 		{
@@ -466,9 +459,7 @@ header .social-icon li a
 	}
 
 }
-/* end 360 media quires */
 
-/* start 768 media quires */
 @media only screen and ( max-width: 767px ) {
 	#home
 		{
