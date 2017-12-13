@@ -13,7 +13,7 @@ $message = $_POST['message'];
 $to = 'seyedehroshamm619@gmail.com';
 $subject = 'the subject';
 $message = 'FROM: '.$name.' Email: '.$email.'Message: '.$message;
-$headers = 'From: seyedehroshamm619@gmail.com' . "\r\n";
+$headers = 'From: mohammadiroshaps@gmail.com' . "\r\n";
  
 if (filter_var($email, FILTER_VALIDATE_EMAIL)) { 
 mail($to, $subject, $message, $headers); 
