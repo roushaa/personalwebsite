@@ -263,5 +263,18 @@ And I started working as a freelancer and are developing a major project on the 
                 </div>
             </div>
         </footer>
+ <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+            $(document).ready(function() {
+                $('#submit').click(function() {
+                    $('#submit').attr('value', 'Please wait...');
+                    $.post("sendemail.php", $("#contactform").serialize(), function(response) {
+                        $('#success').html(response);
+                        $('#submit').attr('value', 'SEND');
+                    });
+                    return false;
+                });
+            });
+    </script>
 	</body>
 </html>
