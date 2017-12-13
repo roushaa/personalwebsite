@@ -1,26 +1,28 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
+ <?php
+$headers = 'Content-type: text/html; charset=utf-8' . "\r\n";
+?>
 <title> sendemail</title>
 </head>
 <body>
 <?php
-$name = $_POST['fullname'];
-$email = $_POST['email'];
-$message = $_POST['message'];
- 
-$to = 'seyedehroshamm619@gmail.com';
-$subject = 'the subject';
-$message = 'FROM: '.$name.' Email: '.$email.'Message: '.$message;
-$headers = 'From: youremail@domain.com' . "\r\n";
- 
-if (filter_var($email, FILTER_VALIDATE_EMAIL)) { 
-mail($to, $subject, $message, $headers); 
-echo "Your email was sent!"; 
-}else{
-echo "Invalid Email, please provide an correct email.";
-}
+
+$to = "seyedehroshamm619@gmail.com";
+$subject = "the subject";
+
+$body = "<html>
+</html>
+</body>";
+$headers = "From: yourname@example.com \r\n";
+$headers .= "Content-type: text/html; charset=utf-8 \r\n";
+if (mail($to, $subject, $body, $headers)) {
+    echo("<p>Your email has been sent successfully</p>");
+    } 
+else {
+    echo("<p>Error sending email! Your server settings do not support this</p>");
+    }
 ?>
 </body>
 </html>
