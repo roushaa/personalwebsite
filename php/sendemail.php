@@ -6,7 +6,7 @@
 </head>
 <body>
 <?php
-$name = $_POST['name'];
+$name = $_POST['fullname'];
 $email = $_POST['email'];
 $message = $_POST['message'];
  
