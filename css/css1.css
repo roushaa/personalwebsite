@@ -148,9 +148,7 @@ header .social-icon li a
 		line-height: 20px;
 		text-align: center;
 	}
-/* end header */
 
-/* start nagivation */
 .navbar-default
 	{
 		background: #fff;
@@ -187,12 +185,10 @@ header .social-icon li a
 	left: 0;
 	top: 0;	
 }
-/* end navigation */
 
-/* start home */
 #home
 	{
-		background: url(../images/photo_2017-12-13_20-23-59.jpg) no-repeat;
+		background: url(../images/web-designer-rosha.jpg) no-repeat;
 		background-size: cover;
 		padding-top: 160px;
 		padding-bottom: 100px;
@@ -393,7 +389,7 @@ header .social-icon li a
 	{
 		font-weight: 400;
 	}
-/
+
 .social-icon
 	{
 		position: relative;
