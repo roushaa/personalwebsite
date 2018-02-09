@@ -1,58 +1,35 @@
 <?php
-$myemail = "seyedehroshamm619@gmail.com";
+ include "class.PHPMailer.php";
+  include "class.SMTP.php"
+  $mail=new PHPMailer(true);
+  $mail->isSMTP();
+if(inset($_post["Send"])); {
 
-/* Check all form inputs using check_input function */
-$fullname = check_input($_POST['name'], "Enter your name");
-$email = check_input($_POST['email']);
-$message = check_input($_POST['message'], "Write your message");
-
-/* If e-mail is not valid show error message */
-if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email))
-{
-show_error("E-mail address not valid");
-}
-/* Let's prepare the message for the e-mail */
-$message = "
-
-Name: $fullname
-email: $email
-Message:$message
-
-";
-
-/* Send the message using mail() function */
-mail($myemail, $message,$fullname);
-
-/* Redirect visitor to the thank you page */
-header('Location: thanks.html');
-exit();
-
-/* Functions we used */
-function check_input($data, $problem='')
-{
-$data = trim($data);
-$data = stripslashes($data);
-$data = htmlspecialchars($data);
-if ($problem && strlen($data) == 0)
-{
-show_error($problem);
-}
-return $data;
+try {
+ $mail->Host='smtp.gmail.com';
+ $mail->SMTPAtuth=true;
+ $mail->SMTPSecure="tls"
+ $mail->port=587;
+ $mail->username="seyedehroshamm619@gmail.com";
+ $mail->setFrom("seyedehroshamm619@gmail.com""Rosha");
+ $mail->addAddress($_POST["fullname"]);
+ $mail->charset="UTF-8";
+ $mail->contentType="Text\html";
+ $mail->msgHTML($_POST["message"]);
+ $mail->send(); 
+ echo '<font color="#fff" face="arial , helvetica, sans-serif" size="+3">The message was sent successfully.</font>';                 
 }
 
-function show_error($myError)
-{
-?>
-<html>
-<body>
+    
+  
+  
 
-<p>Please correct the following error:</p>
-<strong><?php echo $myError; ?></strong>
-<p>Hit the back button and try again</p>
-
-</body>
-</html>
-<?php
-exit();
+ catch(PHPMailerexception $e) {
+  echo $e->errorMessage();
+ 
+ }
+  catch(Excaption $e1){
+  echo $e1->getMessage();
+  }
 }
 ?>
