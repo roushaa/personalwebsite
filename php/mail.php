@@ -3,7 +3,7 @@
   include "class.SMTP.php"
   $mail=new PHPMailer(true);
   $mail->isSMTP();
-if(inset($_post["Send"])); {
+if(isset($_post["Send"])); {
 
 try {
  $mail->Host='smtp.gmail.com';
