@@ -201,6 +201,7 @@ header .social-icon li a
     font-size: 41px;
     padding-bottom: 10px;
     font-family: Gabriola;
+    border-bottom: double 1px;
 	}
 #home h1 span
 	{
